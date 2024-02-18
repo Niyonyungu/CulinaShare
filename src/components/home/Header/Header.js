@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { MdClose } from "react-icons/md";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { motion } from "framer-motion";
-import { logo, logoLight } from "../../../assets/images";
+import lo from "../../../assets/images/Logo.png";
 import Image from "../../designLayouts/Image";
 import { navBarList } from "../../../constants";
 import Flex from "../../designLayouts/Flex";
@@ -31,8 +31,12 @@ const Header = () => {
       <nav className="h-full px-4 max-w-container mx-auto relative">
         <Flex className="flex items-center justify-between h-full">
           <Link to="/">
-            <div>
-              <Image className="w-20 object-cover" imgSrc={logo} />
+            <div className="flex flex-row justify-center items-center">
+              <Image className="w-12 h-12 object-cover" imgSrc={lo} />{" "}
+              <h1 className="mx-1 text-3xl font-black">
+                Culina
+                <span className="text-gray-400 ">Share</span>
+              </h1>
             </div>
           </Link>
           <div>
@@ -70,11 +74,7 @@ const Header = () => {
                   className="w-[80%] h-full relative"
                 >
                   <div className="w-full h-full bg-primeColor p-6">
-                    <img
-                      className="w-28 mb-6"
-                      src={logoLight}
-                      alt="logoLight"
-                    />
+                    <img className="w-28 mb-6" src={lo} alt="logoLight" />
                     <ul className="text-gray-200 flex flex-col gap-2">
                       {navBarList.map((item) => (
                         <li

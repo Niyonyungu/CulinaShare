@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import Slider from "react-slick";
-import {
-  bannerImgOne,
-  bannerImgTwo,
-  bannerImgThree,
-} from "../../assets/images";
+import bannerImgOn from "../../assets/images/banner/bannerImgOne.jpg";
+import bannerImgtw from "../../assets/images/banner/bannerImgThree.jpg";
+import bannerImgth from "../../assets/images/banner/bannerImgTwo.jpg";
 import Image from "../designLayouts/Image";
 
 const Banner = () => {
@@ -38,15 +35,17 @@ const Banner = () => {
           i === dotActive
             ? {
                 width: "30px",
-                color: "#262626",
-                borderRight: "3px #262626 solid",
+                color: "#808000",
+                fontSize: "20px",
+                fontWeight: "900",
+                borderRight: "4px #808000 solid",
                 padding: "8px 0",
                 cursor: "pointer",
               }
             : {
                 width: "30px",
                 color: "transparent",
-                borderRight: "3px white solid",
+                borderRight: "4px white solid",
                 padding: "8px 0",
                 cursor: "pointer",
               }
@@ -79,16 +78,16 @@ const Banner = () => {
                   ? {
                       width: "25px",
                       color: "#262626",
-                      borderRight: "3px #262626 solid",
+                      borderRight: "4px #808000 solid",
                       cursor: "pointer",
-                      fontSize: "12px",
+                      fontSize: "20px",
                     }
                   : {
                       width: "25px",
                       color: "transparent",
-                      borderRight: "3px white solid",
+                      borderRight: "4px white solid",
                       cursor: "pointer",
-                      fontSize: "12px",
+                      fontSize: "20px",
                     }
               }
             >
@@ -102,21 +101,15 @@ const Banner = () => {
   return (
     <div className="w-full bg-white">
       <Slider {...settings}>
-        <Link to="/offer">
-          <div>
-            <Image imgSrc={bannerImgOne} />
-          </div>
-        </Link>
-        <Link to="/offer">
-          <div>
-            <Image imgSrc={bannerImgTwo} />
-          </div>
-        </Link>
-        <Link to="/offer">
-          <div>
-            <Image imgSrc={bannerImgThree} />
-          </div>
-        </Link>
+        <div>
+          <Image imgSrc={bannerImgOn} />
+        </div>
+        <div>
+          <Image imgSrc={bannerImgth} />
+        </div>
+        <div>
+          <Image imgSrc={bannerImgtw} />
+        </div>
       </Slider>
     </div>
   );

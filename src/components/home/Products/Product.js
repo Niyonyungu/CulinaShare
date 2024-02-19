@@ -37,31 +37,25 @@ const Product = (props) => {
         </div>
         <div className="w-full h-32 absolute bg-white -bottom-[130px] group-hover:bottom-0 duration-700">
           <ul className="w-full h-full flex flex-col items-end justify-center gap-2 font-titleFont px-2 border-l border-r">
-            <li className="text-[#767676] hover:text-primeColor text-sm font-normal border-b-[1px] border-b-gray-200 hover:border-b-primeColor flex items-center justify-end gap-2 hover:cursor-pointer pb-1 duration-300 w-full">
-              Compare
-              <span>
-                <GiReturnArrow />
-              </span>
-            </li>
             <li
               onClick={() =>
                 dispatch(
                   addToCart({
                     _id: props._id,
                     name: props.productName,
-                    quantity: 1,
+                    // quantity: 1,
                     image: props.img,
                     badge: props.badge,
-                    price: props.price,
+                    rate: props.rate,
                     colors: props.color,
                   })
                 )
               }
               className="text-[#767676] hover:text-primeColor text-sm font-normal border-b-[1px] border-b-gray-200 hover:border-b-primeColor flex items-center justify-end gap-2 hover:cursor-pointer pb-1 duration-300 w-full"
             >
-              Add to Cart
+              Add to Favorite
               <span>
-                <FaShoppingCart />
+                <BsSuitHeartFill />
               </span>
             </li>
             <li
@@ -73,12 +67,6 @@ const Product = (props) => {
                 <MdOutlineLabelImportant />
               </span>
             </li>
-            <li className="text-[#767676] hover:text-primeColor text-sm font-normal border-b-[1px] border-b-gray-200 hover:border-b-primeColor flex items-center justify-end gap-2 hover:cursor-pointer pb-1 duration-300 w-full">
-              Add to Wish List
-              <span>
-                <BsSuitHeartFill />
-              </span>
-            </li>
           </ul>
         </div>
       </div>
@@ -87,7 +75,10 @@ const Product = (props) => {
           <h2 className="text-lg text-primeColor font-bold">
             {props.productName}
           </h2>
-          <p className="text-[#767676] text-[14px]">${props.price}</p>
+          <p className="text-[#808000] text-[14px]">
+            {" "}
+            <span className="text-gray-400">Rate</span> {props.rate}
+          </p>
         </div>
         <div>
           <p className="text-[#767676] text-[14px]">{props.color}</p>

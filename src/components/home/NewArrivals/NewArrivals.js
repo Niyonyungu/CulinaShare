@@ -2,12 +2,11 @@ import React from "react";
 import Slider from "react-slick";
 import Heading from "../Products/Heading";
 import Product from "../Products/Product";
-import {
-  newArrOne,
-  newArrTwo,
-  newArrThree,
-  newArrFour,
-} from "../../../assets/images/index";
+
+import bannerImgOn from "../../../assets/images/banner/bannerImgOne.jpg";
+import bannerImgtw from "../../../assets/images/banner/bannerImgThree.jpg";
+import bannerImgth from "../../../assets/images/banner/bannerImgTwo.jpg";
+
 import SampleNextArrow from "./SampleNextArrow";
 import SamplePrevArrow from "./SamplePrevArrow";
 
@@ -48,60 +47,55 @@ const NewArrivals = () => {
   };
   return (
     <div className="w-full pb-16">
-      <Heading heading="New Arrivals" />
+      <Heading heading="Featured" />
       <Slider {...settings}>
         <div className="px-2">
           <Product
             _id="100001"
-            img={newArrOne}
+            img={bannerImgOn}
             productName="Round Table Clock"
-            price="44.00"
+            rate="4.0"
             color="Black"
-            badge={true}
             des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis."
           />
         </div>
         <div className="px-2">
           <Product
             _id="100002"
-            img={newArrTwo}
+            img={bannerImgtw}
             productName="Smart Watch"
             price="250.00"
             color="Black"
-            badge={true}
             des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis."
           />
         </div>
         <div className="px-2">
           <Product
             _id="100003"
-            img={newArrThree}
+            img={bannerImgth}
             productName="cloth Basket"
             price="80.00"
             color="Mixed"
-            badge={true}
             des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis."
           />
         </div>
         <div className="px-2">
           <Product
             _id="100004"
-            img={newArrFour}
+            img={bannerImgth}
             productName="Funny toys for babies"
             price="60.00"
             color="Mixed"
-            badge={false}
             des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis."
           />
         </div>
         <div className="px-2">
           <Product
             _id="100005"
-            img={newArrTwo}
+            img={bannerImgOn}
             productName="Funny toys for babies"
             price="60.00"
             color="Mixed"
-            badge={false}
             des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis."
           />
         </div>

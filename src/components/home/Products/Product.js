@@ -1,10 +1,7 @@
 import React from "react";
 import { BsSuitHeartFill } from "react-icons/bs";
-import { GiReturnArrow } from "react-icons/gi";
-import { FaShoppingCart } from "react-icons/fa";
 import { MdOutlineLabelImportant } from "react-icons/md";
 import Image from "../../designLayouts/Image";
-import Badge from "./Badge";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToFave } from "../../../redux/orebiSlice";
@@ -32,9 +29,7 @@ const Product = (props) => {
         <div>
           <Image className="w-full h-full" imgSrc={props.img} />
         </div>
-        <div className="absolute top-6 left-8">
-          {props.badge && <Badge text="New" />}
-        </div>
+
         <div className="w-full h-32 absolute bg-white -bottom-[130px] group-hover:bottom-0 duration-700">
           <ul className="w-full h-full flex flex-col items-end justify-center gap-2 font-titleFont px-2 border-l border-r">
             <li
@@ -43,28 +38,26 @@ const Product = (props) => {
                   addToFave({
                     _id: props._id,
                     name: props.productName,
-                    // quantity: 1,
                     image: props.img,
-                    badge: props.badge,
                     rate: props.rate,
-                    colors: props.color,
+                    category: props.categ,
                   })
                 )
               }
-              className="text-[#767676] hover:text-primeColor text-sm font-normal border-b-[1px] border-b-gray-200 hover:border-b-primeColor flex items-center justify-end gap-2 hover:cursor-pointer pb-1 duration-300 w-full"
+              className="text-[#767676] hover:text-primeColor text-sm font-normal border-b-[1px] border-b-gray-200 hover:border-b-[#808000] flex items-center justify-end gap-2 hover:cursor-pointer pb-1 duration-300 w-full"
             >
               Add to Favorite
               <span>
-                <BsSuitHeartFill />
+                <BsSuitHeartFill className="text-[#808000]" />
               </span>
             </li>
             <li
               onClick={handleProductDetails}
-              className="text-[#767676] hover:text-primeColor text-sm font-normal border-b-[1px] border-b-gray-200 hover:border-b-primeColor flex items-center justify-end gap-2 hover:cursor-pointer pb-1 duration-300 w-full"
+              className="text-[#767676] hover:text-primeColor text-sm font-normal border-b-[1px] border-b-gray-200 hover:border-b-[#808000] flex items-center justify-end gap-2 hover:cursor-pointer pb-1 duration-300 w-full"
             >
               View Details
               <span className="text-lg">
-                <MdOutlineLabelImportant />
+                <MdOutlineLabelImportant className="text-[#808000]" />
               </span>
             </li>
           </ul>
@@ -76,12 +69,13 @@ const Product = (props) => {
             {props.productName}
           </h2>
           <p className="text-[#808000] text-[14px]">
-            {" "}
             <span className="text-gray-400">Rate</span> {props.rate}
           </p>
         </div>
         <div>
-          <p className="text-[#767676] text-[14px]">{props.color}</p>
+          <p className="text-[#808000] text-[14px] font-black">
+            <span className="text-[#767676]">Category: </span> {props.categ}
+          </p>
         </div>
       </div>
     </div>

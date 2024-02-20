@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../../redux/orebiSlice";
+import { addToFave } from "../../../redux/orebiSlice";
 
 const ProductInfo = ({ productInfo }) => {
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ const ProductInfo = ({ productInfo }) => {
       <button
         onClick={() =>
           dispatch(
-            addToCart({
+            addToFave({
               _id: productInfo.id,
               name: productInfo.productName,
               quantity: 1,
@@ -29,7 +29,7 @@ const ProductInfo = ({ productInfo }) => {
         }
         className="w-full py-4 bg-primeColor hover:bg-black duration-300 text-white text-lg font-titleFont"
       >
-        Add to Cart
+        Add to Favorites
       </button>
       <p className="font-normal text-sm">
         <span className="text-base font-medium"> Categories:</span> Spring

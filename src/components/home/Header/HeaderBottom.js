@@ -48,7 +48,7 @@ const HeaderBottom = () => {
             className="flex h-14 cursor-pointer items-center gap-2 text-primeColor"
           >
             <HiOutlineMenuAlt4 className="w-5 h-5 text-[#808000]" />
-            <p className="text-[14px] font-normal">Recipe Category</p>
+            <p className="text-[14px] font-normal">Recipe Categories</p>
 
             {show && (
               <motion.ul

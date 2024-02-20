@@ -1,8 +1,5 @@
-import saleImgOne from "./sale/saleImgOne.webp";
-import saleImgTwo from "./sale/saleImgTwo.webp";
-import saleImgThree from "./sale/saleImgThree.webp";
 // ============== Products Start here ====================
-// New Arrivals
+// Featured
 import newArrOne from "./products/newArrival/newArrOne.webp";
 import newArrTwo from "./products/newArrival/newArrTwo.webp";
 import newArrThree from "./products/newArrival/newArrThree.webp";
@@ -20,16 +17,11 @@ import spfTwo from "./products/specialOffer/spfTwo.webp";
 import spfThree from "./products/specialOffer/spfThree.webp";
 import spfFour from "./products/specialOffer/spfFour.webp";
 
-// Year Product
-import productOfTheYear from "./products/productOfTheYear.webp";
 // ============== Products End here ======================
-import paymentCard from "./payment.png";
-import emptyCart from "../images/emptyCart.png";
+
+import emptyFav from "../images/emptyCart.png";
 
 export {
-  saleImgOne,
-  saleImgTwo,
-  saleImgThree,
   // ===================== Products start here ============
   // New Arrivals
   newArrOne,
@@ -49,9 +41,6 @@ export {
   spfThree,
   spfFour,
 
-  // Year Product
-  productOfTheYear,
   // ===================== Products End here ==============
-  paymentCard,
-  emptyCart,
+  emptyFav,
 };

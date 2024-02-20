@@ -7,7 +7,7 @@ import Image from "../../designLayouts/Image";
 import Badge from "./Badge";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../../redux/orebiSlice";
+import { addToFave } from "../../../redux/orebiSlice";
 
 const Product = (props) => {
   const dispatch = useDispatch();
@@ -40,7 +40,7 @@ const Product = (props) => {
             <li
               onClick={() =>
                 dispatch(
-                  addToCart({
+                  addToFave({
                     _id: props._id,
                     name: props.productName,
                     // quantity: 1,

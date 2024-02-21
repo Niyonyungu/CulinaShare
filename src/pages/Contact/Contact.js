@@ -9,63 +9,63 @@ const Contact = () => {
     setPrevLocation(location.state.data);
   }, [location]);
 
-  const [clientName, setclientName] = useState("");
-  const [email, setEmail] = useState("");
-  const [messages, setMessages] = useState("");
+  const [prodName, setprodName] = useState("");
+  const [descrip, setdescrip] = useState("");
+  const [rate, setrate] = useState("");
 
-  // ========== Error Messages Start here ============
-  const [errClientName, setErrClientName] = useState("");
-  const [errEmail, setErrEmail] = useState("");
-  const [errMessages, setErrMessages] = useState("");
-  // ========== Error Messages End here ==============
+  // ========== Error rate Start here ============
+  const [errprodName, setErrprodName] = useState("");
+  const [errdescrip, setErrdescrip] = useState("");
+  const [errrate, setErrrate] = useState("");
+  // ========== Error rate End here ==============
   const [successMsg, setSuccessMsg] = useState("");
 
   const handleName = (e) => {
-    setclientName(e.target.value);
-    setErrClientName("");
+    setprodName(e.target.value);
+    setErrprodName("");
   };
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
-    setErrEmail("");
+  const handledescrip = (e) => {
+    setdescrip(e.target.value);
+    setErrdescrip("");
   };
-  const handleMessages = (e) => {
-    setMessages(e.target.value);
-    setErrMessages("");
+  const handlerate = (e) => {
+    setrate(e.target.value);
+    setErrrate("");
   };
 
-  // ================= Email Validation start here =============
-  const EmailValidation = (email) => {
-    return String(email)
+  // ================= descrip Validation start here =============
+  const descripValidation = (descrip) => {
+    return String(descrip)
       .toLowerCase()
       .match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i);
   };
-  // ================= Email Validation End here ===============
+  // ================= descrip Validation End here ===============
 
   const handlePost = (e) => {
     e.preventDefault();
-    if (!clientName) {
-      setErrClientName("Enter your Name");
+    if (!prodName) {
+      setErrprodName("Enter your Name");
     }
-    if (!email) {
-      setErrEmail("Enter your Email");
+    if (!descrip) {
+      setErrdescrip("Enter your descrip");
     } else {
-      if (!EmailValidation(email)) {
-        setErrEmail("Enter a Valid Email");
+      if (!descripValidation(descrip)) {
+        setErrdescrip("Enter a Valid descrip");
       }
     }
-    if (!messages) {
-      setErrMessages("Enter your Messages");
+    if (!rate) {
+      setErrrate("Enter your rate");
     }
-    if (clientName && email && EmailValidation(email) && messages) {
+    if (prodName && descrip && descripValidation(descrip) && rate) {
       setSuccessMsg(
-        `Thank you dear ${clientName}, Your messages has been received successfully. Futher details will sent to you by your email at ${email}.`
+        `Thank you`
       );
     }
   };
 
   return (
     <div className="max-w-container mx-auto px-4">
-      <Breadcrumbs title="Contact" prevLocation={prevLocation} />
+      <Breadcrumbs title="Contibute" prevLocation={prevLocation} />
       {successMsg ? (
         <p className="pb-20 w-96 font-medium text-green-500">{successMsg}</p>
       ) : (
@@ -80,53 +80,53 @@ const Contact = () => {
               </p>
               <input
                 onChange={handleName}
-                value={clientName}
+                value={prodName}
                 className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-primeColor"
                 type="text"
                 placeholder="Enter your name here"
               />
-              {errClientName && (
+              {errprodName && (
                 <p className="text-red-500 text-sm font-titleFont font-semibold mt-1 px-2 flex items-center gap-1">
                   <span className="text-sm italic font-bold">!</span>
-                  {errClientName}
+                  {errprodName}
                 </p>
               )}
             </div>
             <div>
               <p className="text-base font-titleFont font-semibold px-2">
-                Email
+                descrip
               </p>
               <input
-                onChange={handleEmail}
-                value={email}
+                onChange={handledescrip}
+                value={descrip}
                 className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-primeColor"
-                type="email"
+                type="descrip"
                 placeholder="Enter your name here"
               />
-              {errEmail && (
+              {errdescrip && (
                 <p className="text-red-500 text-sm font-titleFont font-semibold mt-1 px-2 flex items-center gap-1">
                   <span className="text-sm italic font-bold">!</span>
-                  {errEmail}
+                  {errdescrip}
                 </p>
               )}
             </div>
             <div>
               <p className="text-base font-titleFont font-semibold px-2">
-                Messages
+                rate
               </p>
               <textarea
-                onChange={handleMessages}
-                value={messages}
+                onChange={handlerate}
+                value={rate}
                 cols="30"
                 rows="3"
                 className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-primeColor resize-none"
                 type="text"
                 placeholder="Enter your name here"
               ></textarea>
-              {errMessages && (
+              {errrate && (
                 <p className="text-red-500 text-sm font-titleFont font-semibold mt-1 px-2 flex items-center gap-1">
                   <span className="text-sm italic font-bold">!</span>
-                  {errMessages}
+                  {errrate}
                 </p>
               )}
             </div>

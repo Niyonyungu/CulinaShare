@@ -4,7 +4,7 @@ import Pagination from "../../components/pageProps/shopPage/Pagination";
 import ProductBanner from "../../components/pageProps/shopPage/ProductBanner";
 
 const Shop = () => {
-  const [itemsPerPage, setItemsPerPage] = useState(12);
+  const [itemsPerPage, setItemsPerPage] = useState(3);
   const itemsPerPageFromBanner = (itemsPerPage) => {
     setItemsPerPage(itemsPerPage);
   };

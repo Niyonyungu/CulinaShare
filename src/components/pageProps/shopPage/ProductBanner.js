@@ -60,7 +60,7 @@ const ProductBanner = ({ itemsPerPageFromBanner }) => {
           </label>
           <select
             // onChange={(e) => setSelected(e.target.value)}
-            id="countries"
+            id="coun"
             className="w-32 md:w-52 border-[1px] border-olive-200 py-1 px-4 cursor-pointer text-primeColor text-base block dark:placeholder-olive-400 appearance-none focus-within:outline-none focus-visible:border-primeColor "
           >
             <option> Desert</option>
@@ -75,7 +75,7 @@ const ProductBanner = ({ itemsPerPageFromBanner }) => {
           <label className="block font-black text-black">Show:</label>
           <select
             onChange={(e) => itemsPerPageFromBanner(+e.target.value)}
-            id="countries"
+            id="coun"
             className="w-16 md:w-20 border-[1px] border-olive-200 py-1 px-4 cursor-pointer text-primeColor text-base block dark:placeholder-gray-400 appearance-none focus-within:outline-none focus-visible:border-primeColor"
           >
             <option value="12">12</option>

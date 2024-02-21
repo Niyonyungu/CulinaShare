@@ -1,7 +1,7 @@
 import React from "react";
 import { ImCross } from "react-icons/im";
 import { useDispatch } from "react-redux";
-import { deleteItem } from "../../redux/orebiSlice";
+import { deleteItem } from "../../redux/culinaSlice";
 
 const ItemCard = ({ item }) => {
   const dispatch = useDispatch();

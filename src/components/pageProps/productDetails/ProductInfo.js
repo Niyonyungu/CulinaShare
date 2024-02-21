@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { addToFave } from "../../../redux/orebiSlice";
+import { addToFave } from "../../../redux/culinaSlice";
 
 const ProductInfo = ({ productInfo }) => {
   const dispatch = useDispatch();

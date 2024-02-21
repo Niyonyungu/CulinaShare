@@ -42,9 +42,6 @@ export const navBarList = [
   },
 ];
 // =================== NavBarList End here ======================
-// =================== Special Offer data Start here ============
-
-// =================== Special Offer data End here ==============
 
 // =================== PaginationItems Start here ===============
 

@@ -4,7 +4,7 @@ import { MdOutlineLabelImportant } from "react-icons/md";
 import Image from "../../designLayouts/Image";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addToFave } from "../../../redux/orebiSlice";
+import { addToFave } from "../../../redux/culinaSlice";
 
 const Product = (props) => {
   const dispatch = useDispatch();

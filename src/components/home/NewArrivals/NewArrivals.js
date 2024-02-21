@@ -3,10 +3,10 @@ import Slider from "react-slick";
 import Heading from "../Products/Heading";
 import Product from "../Products/Product";
 
-import bannerImgOn from "../../../assets/images/products/newArrival/feat1.jpg";
-import bannerImgtw from "../../../assets/images/products/newArrival/feat2.jpg";
-import bannerImgth from "../../../assets/images/products/newArrival/feat3.jpg";
-import bannerImgf from "../../../assets/images/products/newArrival/pexels-bulbfish-1143754.jpg";
+import bannerImgOn from "../../../assets/images/products/feat1.jpg";
+import bannerImgtw from "../../../assets/images/products/feat2.jpg";
+import bannerImgth from "../../../assets/images/products/feat3.jpg";
+import bannerImgf from "../../../assets/images/products/pexels-bulbfish-1143754.jpg";
 
 import SampleNextArrow from "./SampleNextArrow";
 import SamplePrevArrow from "./SamplePrevArrow";

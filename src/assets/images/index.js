@@ -1,41 +1,35 @@
 // ============== Products Start here ====================
-// Featured
-import newArrOne from "./products/newArrival/newArrOne.webp";
-import newArrTwo from "./products/newArrival/newArrTwo.webp";
-import newArrThree from "./products/newArrival/newArrThree.webp";
-import newArrFour from "./products/newArrival/newArrFour.webp";
 
-// Best Sellers
-import bestSellerOne from "./products/bestSeller/bestSellerOne.webp";
-import bestSellerTwo from "./products/bestSeller/bestSellerTwo.webp";
-import bestSellerThree from "./products/bestSeller/bestSellerThree.webp";
-import bestSellerFour from "./products/bestSeller/bestSellerFour.webp";
-
-// Special Offers
-import spfOne from "./products/specialOffer/spfOne.webp";
-import spfTwo from "./products/specialOffer/spfTwo.webp";
-import spfThree from "./products/specialOffer/spfThree.webp";
-import spfFour from "./products/specialOffer/spfFour.webp";
+import newArrOne from "./products/feat1.jpg";
+import newArrTwo from "./products/feat2.jpg";
+import newArrThree from "./products/feat3.jpg";
+import newArrFour from "./products/feat4.jpg";
+import bestSellerOne from "./products/pexels-bulbfish-1143754.jpg";
+import bestSellerTwo from "./products/pexels-chitokan-c-2087748.jpg";
+import bestSellerThree from "./products/pexels-digital-buggu-166653.jpg";
+import bestSellerFour from "./products/pexels-ella-olsson-1640774.jpg";
+import spfOne from "./products/pexels-engin-akyurt-2347311.jpg";
+import spfTwo from "./products/pexels-galina-kudryashova-20291121.jpg";
+import spfThree from "./products/pexels-geraud-pfeiffer-6605961.jpg";
+import spfFour from "./products/pexels-jill-wellington-257816.jpg";
 
 // ============== Products End here ======================
 
-import emptyFav from "../images/emptyCart.png";
+import emptyFav from "../images/emptyFave.png";
 
 export {
   // ===================== Products start here ============
-  // New Arrivals
+
   newArrOne,
   newArrTwo,
   newArrThree,
   newArrFour,
 
-  // Best Sellers
   bestSellerOne,
   bestSellerTwo,
   bestSellerThree,
   bestSellerFour,
 
-  // Sprcial Offers
   spfOne,
   spfTwo,
   spfThree,

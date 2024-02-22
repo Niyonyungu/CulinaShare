@@ -53,25 +53,33 @@ const Pagination = ({ itemsPerPage }) => {
         <h2 className="block font-black text-black">Category : </h2>
         <div className="flex ml-2 gap-3">
           <button
-            className="text-gray-400 border-2 font-black  rounded border-[#808000] p-1 hover:bg-[#808000] hover:text-white"
+          className={`text-gray-400 border-2 font-black rounded border-[#808000] p-1 hover:bg-[#808000] hover:text-white ${
+            selectedCategory === "" ? "bg-[#808000]" : ""
+          }`}
             onClick={() => handleCategoryClick("")}
           >
             All
           </button>
           <button
-            className="text-gray-400 border-2 font-black  rounded border-[#808000] p-1 hover:bg-[#808000] hover:text-white"
+           className={`text-gray-400 border-2 font-black rounded border-[#808000] p-1 hover:bg-[#808000] hover:text-white ${
+            selectedCategory === "Quick meals" ? "bg-[#808000]" : ""
+          }`}
             onClick={() => handleCategoryClick("Quick meals")}
           >
             Quick Meals
           </button>
           <button
-            className="text-gray-400 border-2 font-black  rounded border-[#808000] p-1 hover:bg-[#808000] hover:text-white"
+           className={`text-gray-400 border-2 font-black rounded border-[#808000] p-1 hover:bg-[#808000] hover:text-white ${
+            selectedCategory === "Vegetarian" ? "bg-[#808000]" : ""
+          }`}
             onClick={() => handleCategoryClick("Vegetarian")}
           >
             Vegetarian
           </button>
           <button
-            className="text-gray-400 border-2 font-black  rounded border-[#808000] p-1 hover:bg-[#808000] hover:text-white"
+           className={`text-gray-400 border-2 font-black rounded border-[#808000] p-1 hover:bg-[#808000] hover:text-white ${
+            selectedCategory === "Dessert" ? "bg-[#808000]" : ""
+          }`}
             onClick={() => handleCategoryClick("Dessert")}
           >
             Dessert

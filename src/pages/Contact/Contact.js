@@ -16,7 +16,6 @@ const Contact = () => {
     rate: "",
     instruction: ""
   });
-  const [successMessage, setSuccessMessage] = useState("");
 
   useEffect(() => {
     setPrevLocation(location.state.data);
@@ -61,7 +60,6 @@ const Contact = () => {
           <h1 className="font-titleFont font-semibold text-3xl">
             Fill <span className="text-[#808000]">up</span> a Form <span className="text-[#808000]">To</span> add a <span className="text-[#808000]">Recipe</span>
           </h1>
-          {successMessage && <p className="text-[#808000]">{successMessage}</p>}
           <div className="w-[500px] h-auto py-6 flex flex-col gap-6">
             <div>
               <p className="text-base font-titleFont font-semibold px-2">

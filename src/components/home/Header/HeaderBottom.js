@@ -35,6 +35,16 @@ const HeaderBottom = () => {
     setFilteredProducts(filtered);
   }, [searchQuery]);
 
+  //        ======           Logout  
+
+  const handleLogOut = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    setTimeout(() => {
+      navigate("/");
+    }, 2000);
+  };
+
   return (
     <div className="w-full bg-[#F5F5F3] relative">
       <div className="max-w-container mx-auto">
@@ -73,18 +83,17 @@ const HeaderBottom = () => {
                         ) & setSearchQuery("")
                       }
                       key={item._id}
-                      className="max-w-[600px] h-28 bg-gray-100 mb-3 flex items-center gap-3"
+                      className="max-w-[600px] h-28 bg-gray-100 rounded mb-3 flex items-center gap-3"
                     >
                       <img className="w-24" src={item.img} alt="productImg" />
                       <div className="flex flex-col gap-1">
                         <p className="font-semibold text-lg">
                           {item.productName}
                         </p>
-                        <p className="text-xs">{item.des}</p>
-                        <p className="text-sm">
-                          Price:{" "}
+                        <p className="text-sm text-[#808000]">
+                          Rate:{" "}
                           <span className="text-primeColor font-semibold">
-                            ${item.price}
+                            {item.rate}
                           </span>
                         </p>
                       </div>
@@ -115,6 +124,11 @@ const HeaderBottom = () => {
                     Sign Up
                   </li>
                 </Link>
+                <div onClick={() => setShowUser(false)} >
+                  <li onClick={handleLogOut} className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer">
+                    Log Out
+                  </li>
+                </div>
               </motion.ul>
             )}
           </div>

@@ -25,6 +25,18 @@ const Header = () => {
     window.addEventListener("resize", ResponsiveMenu);
   }, []);
 
+// ------------ check if logged in ----------------------
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const usar = JSON.parse(localStorage.getItem("user"));
+  console.log(usar, "user");
+  useEffect(() => {
+    if (usar) {
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  }, [usar]);
+
   return (
     <div className="w-full h-20 bg-white sticky top-0 z-50 border-b-[1px] border-b-gray-200">
       <nav className="h-full px-4 max-w-container mx-auto relative">
@@ -47,16 +59,22 @@ const Header = () => {
                 className="flex items-center w-auto z-50 p-0 gap-2"
               >
                 <>
-                  {navBarList.map(({ _id, title, link }) => (
-                    <NavLink
-                      key={_id}
-                      className="flex font-normal hover:font-bold w-20 h-6 justify-center items-center px-12 text-base text-gray-400 hover:underline underline-offset-[4px] decoration-[1px] hover:text-[#808000]  md:border-r-[2px] border-r-[#808000] hoverEffect last:border-r-0"
-                      to={link}
-                      state={{ data: location.pathname.split("/")[1] }}
-                    >
-                      <li>{title}</li>
-                    </NavLink>
-                  ))}
+                {navBarList.map(({ _id, title, link }) => {
+                    if (link === '/cart' && !isLoggedIn) {
+                      return null; 
+                    } else {
+                      return (
+                        <NavLink
+                          key={_id}
+                          className="flex font-normal hover:font-bold w-20 h-6 justify-center items-center px-12 text-base text-gray-400 hover:underline underline-offset-[4px] decoration-[1px] hover:text-[#808000]  md:border-r-[2px] border-r-[#808000] hoverEffect last:border-r-0"
+                          to={link}
+                          state={{ data: location.pathname.split("/")[1] }}
+                        >
+                          <li>{title}</li>
+                        </NavLink>
+                      );
+                    }
+                  })}
                 </>
               </motion.ul>
             )}

@@ -9,136 +9,72 @@ const Contact = () => {
     setPrevLocation(location.state.data);
   }, [location]);
 
-  const [prodName, setprodName] = useState("");
-  const [descrip, setdescrip] = useState("");
-  const [rate, setrate] = useState("");
-
-  // ========== Error rate Start here ============
-  const [errprodName, setErrprodName] = useState("");
-  const [errdescrip, setErrdescrip] = useState("");
-  const [errrate, setErrrate] = useState("");
-  // ========== Error rate End here ==============
-  const [successMsg, setSuccessMsg] = useState("");
-
-  const handleName = (e) => {
-    setprodName(e.target.value);
-    setErrprodName("");
-  };
-  const handledescrip = (e) => {
-    setdescrip(e.target.value);
-    setErrdescrip("");
-  };
-  const handlerate = (e) => {
-    setrate(e.target.value);
-    setErrrate("");
-  };
-
-  // ================= descrip Validation start here =============
-  const descripValidation = (descrip) => {
-    return String(descrip)
-      .toLowerCase()
-      .match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i);
-  };
-  // ================= descrip Validation End here ===============
-
-  const handlePost = (e) => {
-    e.preventDefault();
-    if (!prodName) {
-      setErrprodName("Enter your Name");
-    }
-    if (!descrip) {
-      setErrdescrip("Enter your descrip");
-    } else {
-      if (!descripValidation(descrip)) {
-        setErrdescrip("Enter a Valid descrip");
-      }
-    }
-    if (!rate) {
-      setErrrate("Enter your rate");
-    }
-    if (prodName && descrip && descripValidation(descrip) && rate) {
-      setSuccessMsg(
-        `Thank you`
-      );
-    }
-  };
 
   return (
     <div className="max-w-container mx-auto px-4">
       <Breadcrumbs title="Contibute" prevLocation={prevLocation} />
-      {successMsg ? (
-        <p className="pb-20 w-96 font-medium text-green-500">{successMsg}</p>
-      ) : (
         <form className="pb-20">
           <h1 className="font-titleFont font-semibold text-3xl">
-            Fill up a Form
+            Fill <span className="text-[#808000]">up</span> a Form <span className="text-[#808000]">To</span> add a <span className="text-[#808000]">Recipe</span>
           </h1>
           <div className="w-[500px] h-auto py-6 flex flex-col gap-6">
             <div>
               <p className="text-base font-titleFont font-semibold px-2">
-                Name
+                Re<span className="text-[#808000]">ci</span>pe Name
               </p>
-              <input
-                onChange={handleName}
-                value={prodName}
-                className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-primeColor"
+              <input      
+                className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-[#808000]"
                 type="text"
-                placeholder="Enter your name here"
-              />
-              {errprodName && (
-                <p className="text-red-500 text-sm font-titleFont font-semibold mt-1 px-2 flex items-center gap-1">
-                  <span className="text-sm italic font-bold">!</span>
-                  {errprodName}
-                </p>
-              )}
+                placeholder="Enter your recipe name here"
+              />    
             </div>
             <div>
               <p className="text-base font-titleFont font-semibold px-2">
-                descrip
+                Re<span className="text-[#808000]" >ci</span>pe Image
               </p>
-              <input
-                onChange={handledescrip}
-                value={descrip}
-                className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-primeColor"
-                type="descrip"
-                placeholder="Enter your name here"
+              <input    
+                className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-[#808000]"
+                type="file"
               />
-              {errdescrip && (
-                <p className="text-red-500 text-sm font-titleFont font-semibold mt-1 px-2 flex items-center gap-1">
-                  <span className="text-sm italic font-bold">!</span>
-                  {errdescrip}
-                </p>
-              )}
             </div>
             <div>
               <p className="text-base font-titleFont font-semibold px-2">
-                rate
+                Ca<span className="text-[#808000]">teg</span>ory</p>
+              <input     
+                className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-[#808000]"
+                type="text"
+                placeholder="Recipe Category"
+              />   
+            </div>
+            <div>
+              <p className="text-base font-titleFont font-semibold px-2">
+               R<span className="text-[#808000]">a</span>te
+              </p>
+              <input    
+                className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-[#808000]"
+                type="text"
+                placeholder="recipe rate"
+              />
+            </div>
+            <div>
+              <p className="text-base font-titleFont font-semibold px-2">
+               In<span className="text-[#808000]">struct</span>ion
               </p>
               <textarea
-                onChange={handlerate}
-                value={rate}
                 cols="30"
                 rows="3"
-                className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-primeColor resize-none"
+                className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-[#808000] resize-none"
                 type="text"
-                placeholder="Enter your name here"
+                placeholder="Enter How to prepare this recipe"
               ></textarea>
-              {errrate && (
-                <p className="text-red-500 text-sm font-titleFont font-semibold mt-1 px-2 flex items-center gap-1">
-                  <span className="text-sm italic font-bold">!</span>
-                  {errrate}
-                </p>
-              )}
             </div>
             <button
-              onClick={handlePost}
-              className="w-44 bg-primeColor text-gray-200 h-10 font-titleFont text-base tracking-wide font-semibold hover:bg-black hover:text-white duration-200"
+              className="w-44 bg-[#808000] text-gray-200 h-10 font-titleFont text-base tracking-wide font-semibold hover:bg-olive-400 hover:text-white duration-200"
             >
-              Post
+              SUBMIT
             </button>
           </div>
         </form>
-      )}
     </div>
   );
 };

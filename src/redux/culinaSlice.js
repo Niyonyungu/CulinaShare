@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   userInfo: [],
   products: [],
+  filteredRecipe: [],
 };
 
 export const culinaSlice = createSlice({
@@ -28,6 +29,8 @@ export const culinaSlice = createSlice({
     resetFave: (state) => {
       state.products = [];
     },
+
+
   },
 });
 

@@ -50,7 +50,7 @@ export const paginationItems = [
     "img": spfOne,
     "productName": "Noodles",
     "rate": 25,
-    "categ": "Dessert",
+    "categ": "Quick meals",
     "des": "Preheat oven to 350°F (175°C). Cream together butter, white sugar, and brown sugar until smooth. Beat in eggs one at a time, then stir in vanilla. Dissolve baking soda in hot water. Add to batter along with salt. Stir in flour, chocolate chips, and nuts. Drop by large spoonfuls onto ungreased pans. Bake for about 10 minutes in the preheated oven, or until edges are nicely browned."
   },
   {
@@ -74,7 +74,7 @@ export const paginationItems = [
     "img": bestSellerTwo,
     "productName": "Mushroom taco",
     "rate": 27,
-    "categ": "Vegetarian",
+    "categ": "Dessert",
     "des": "In a saucepan, warm broth over low heat. Warm 2 tablespoons olive oil in a large saucepan over medium-high heat. Stir in the mushrooms and cook until soft, about 3 minutes. Remove mushrooms and their liquid and set aside. Add 1 tablespoon olive oil to skillet and stir in the shallots. Cook 1 minute. Add rice, stirring to coat with oil, about 2 minutes. When the rice has taken on a pale, golden color, pour in wine, stirring constantly until the wine is fully absorbed. Add 1/2 cup broth to the rice, and stir until the broth is absorbed. Continue adding broth 1/2 cup at a time, stirring continuously, until the liquid is absorbed and the rice is al dente, about 15 to 20 minutes. Remove from heat, and stir in mushrooms with their liquid, butter, and Parmesan. Season with salt and pepper to taste."
   },
   {

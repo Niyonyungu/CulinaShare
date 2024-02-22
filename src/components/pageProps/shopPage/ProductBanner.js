@@ -4,7 +4,7 @@ import { ImList } from "react-icons/im";
 import { GoTriangleDown } from "react-icons/go";
 
 const ProductBanner = ({ itemsPerPageFromBanner }) => {
-  //   const [selected, setSelected] = useState("");
+
   const [girdViewActive, setGridViewActive] = useState(true);
   const [listViewActive, setListViewActive] = useState(false);
   useEffect(() => {
@@ -23,10 +23,6 @@ const ProductBanner = ({ itemsPerPageFromBanner }) => {
 
   return (
     <div className="w-full flex flex-col md:flex-row md:items-center justify-between">
-      {/* =========================================================
-                            Left Part Start here
-        ======================================================== */}
-
       <div className="flex items-center gap-4">
         <span
           className={`${
@@ -47,30 +43,8 @@ const ProductBanner = ({ itemsPerPageFromBanner }) => {
           <ImList />
         </span>
       </div>
-      {/* =========================================================
-                            Left Part End here
-        ======================================================== */}
-      {/* =========================================================
-                            Right Part STart here
-        ======================================================== */}
       <div className="flex items-center gap-2 md:gap-6 mt-4 md:mt-0">
-        <div className="flex items-center gap-2 text-base text-[#767676] relative">
-          <label className="block font-black text-black">
-            Sort by Categoties:
-          </label>
-          <select
-            // onChange={(e) => setSelected(e.target.value)}
-            id="coun"
-            className="w-32 md:w-52 border-[1px] border-olive-200 py-1 px-4 cursor-pointer text-primeColor text-base block dark:placeholder-olive-400 appearance-none focus-within:outline-none focus-visible:border-primeColor "
-          >
-            <option> Desert</option>
-            <option> Vegetarian </option>
-            <option> Quick Meals </option>
-          </select>
-          <span className="absolute text-sm right-2 md:right-4 top-2.5">
-            <GoTriangleDown className="text-[#808000]" />
-          </span>
-        </div>
+     
         <div className="flex items-center gap-2 text-[#767676] relative">
           <label className="block font-black text-black">Show:</label>
           <select
@@ -78,17 +52,14 @@ const ProductBanner = ({ itemsPerPageFromBanner }) => {
             id="coun"
             className="w-16 md:w-20 border-[1px] border-olive-200 py-1 px-4 cursor-pointer text-primeColor text-base block dark:placeholder-gray-400 appearance-none focus-within:outline-none focus-visible:border-primeColor"
           >
-            <option value="12">3</option>
-            <option value="24">6</option> 
+            <option value="9">9</option>
+            <option value="18">18</option> 
           </select>
           <span className="absolute text-sm right-3 top-2.5">
             <GoTriangleDown className="text-[#808000]" />
           </span>
         </div>
       </div>
-      {/* =========================================================
-                            Right Part End here
-        ======================================================== */}
     </div>
   );
 };

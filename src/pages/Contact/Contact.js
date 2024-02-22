@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Breadcrumbs from "../../components/pageProps/Breadcrumbs";
 import { paginationItems } from "../../constants";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
+  const navigate = useNavigate();
   const location = useLocation();
   const [prevLocation, setPrevLocation] = useState("");
 
@@ -31,15 +33,15 @@ const Contact = () => {
       categ: formData.category,
       des: formData.instruction
     };
-    paginationItems.push(newItem);
+    paginationItems.unshift(newItem);
     setFormData({
       recipeName: "",
       recipeImage: "",
       category: "",
       rate: "",
       instruction: ""
-    });
-    setSuccessMessage("Recipe submitted successfully!");
+    }); 
+      navigate("/Shop");
   };
 
   const handleChange = (e) => {

@@ -52,8 +52,9 @@ const ProductBanner = ({ itemsPerPageFromBanner }) => {
             id="coun"
             className="w-16 md:w-20 border-[1px] border-olive-200 py-1 px-4 cursor-pointer text-primeColor text-base block dark:placeholder-gray-400 appearance-none focus-within:outline-none focus-visible:border-primeColor"
           >
+            <option value="3">3</option>
             <option value="9">9</option>
-            <option value="18">18</option> 
+            <option value="18">18</option>
           </select>
           <span className="absolute text-sm right-3 top-2.5">
             <GoTriangleDown className="text-[#808000]" />

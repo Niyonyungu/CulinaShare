@@ -2,14 +2,17 @@ import {
   spfOne,
   spfTwo,
   spfThree,
-  spfFour,
-  bestSellerOne,
   bestSellerTwo,
   bestSellerThree,
   bestSellerFour,
   newArrOne,
   newArrTwo,
   newArrThree,
+  applePie,
+  eggPlant,
+  bananaBred,
+  beefTac,
+  chockKace,
 } from "../assets/images/index";
 
 // =================== NavBarList Start here ====================
@@ -51,7 +54,7 @@ export const paginationItems = [
     "productName": "Noodles",
     "rate": 25,
     "categ": "Quick meals",
-    "des": "Preheat oven to 350°F (175°C). Cream together butter, white sugar, and brown sugar until smooth. Beat in eggs one at a time, then stir in vanilla. Dissolve baking soda in hot water. Add to batter along with salt. Stir in flour, chocolate chips, and nuts. Drop by large spoonfuls onto ungreased pans. Bake for about 10 minutes in the preheated oven, or until edges are nicely browned."
+    "des" : "With the water at a vigorous boil, the noodles are gently lowered into the pot, cascading down like ribbons of possibility. Care must be taken not to overcrowd the pot, allowing each noodle ample space to cook evenly and without clumping together. As the noodles submerge into the bubbling water, they begin to soften, gradually transforming from stiff strands to supple ribbons of culinary delight",
   },
   {
     "_id": 1002,
@@ -59,23 +62,23 @@ export const paginationItems = [
     "productName": "Vegetable Stir Fry",
     "rate": 30,
     "categ": "Vegetarian",
-    "des": "Heat oil in a large skillet or wok over medium-high heat. Add broccoli, bell peppers, carrots, and snow peas. Cook, stirring constantly, until vegetables are tender yet crisp. Stir in garlic and ginger; cook for an additional 30 seconds. In a small bowl, whisk together soy sauce, vegetable broth, cornstarch, and brown sugar. Pour sauce over vegetables; cook and stir until sauce is thickened and vegetables are evenly coated."
+    "des" : "To begin, gather an assortment of vegetables, such as bell peppers, broccoli, carrots, snap peas, mushrooms, and any other favorites you have on hand. Wash and chop the vegetables into bite-sized pieces, ensuring uniformity in size to promote even cooking.",
   },
   {
     "_id": 1003,
-    "img": spfThree,
-    "productName": "Pumpkin Soup",
+    "img": bestSellerTwo,
+    "productName": "Mushroom taco",
     "rate": 28,
     "categ": "Vegetarian",
-    "des": "Heat olive oil in a large pot over medium heat. Add onion and garlic; cook and stir until onion is transparent. Stir in pumpkin puree, vegetable broth, cinnamon, nutmeg, and sugar. Bring to a boil, then reduce heat and simmer for 10 minutes. Blend soup until smooth using an immersion blender. Serve hot, garnished with a dollop of sour cream and a sprinkle of chopped chives."
+    "des": "To prepare mushroom tacos, start by selecting fresh mushrooms of your choice, such as portobello, shiitake, or cremini, depending on your preference and availability. Thoroughly clean the mushrooms to remove any dirt or debris, then slice them into thin strips or bite-sized pieces, ensuring even cooking.",
   },
   {
     "_id": 1006,
-    "img": bestSellerTwo,
-    "productName": "Mushroom taco",
+    "img": spfThree,
+    "productName": "Pumpkin Soup",
     "rate": 27,
     "categ": "Dessert",
-    "des": "In a saucepan, warm broth over low heat. Warm 2 tablespoons olive oil in a large saucepan over medium-high heat. Stir in the mushrooms and cook until soft, about 3 minutes. Remove mushrooms and their liquid and set aside. Add 1 tablespoon olive oil to skillet and stir in the shallots. Cook 1 minute. Add rice, stirring to coat with oil, about 2 minutes. When the rice has taken on a pale, golden color, pour in wine, stirring constantly until the wine is fully absorbed. Add 1/2 cup broth to the rice, and stir until the broth is absorbed. Continue adding broth 1/2 cup at a time, stirring continuously, until the liquid is absorbed and the rice is al dente, about 15 to 20 minutes. Remove from heat, and stir in mushrooms with their liquid, butter, and Parmesan. Season with salt and pepper to taste."
+    "des": "To start, one must first gather the necessary ingredients: a fresh pumpkin, onions, garlic, vegetable or chicken broth, cream, butter, and an array of spices such as nutmeg, cinnamon, and ginger. Each ingredient plays a crucial role in enhancing the overall flavor profile of the soup, contributing its unique essence to the final dish.",
   },
   {
     "_id": 1007,
@@ -83,7 +86,7 @@ export const paginationItems = [
     "productName": "Chicken Alfredo Pasta",
     "rate": 33,
     "categ": "Quick meals",
-    "des": "Cook pasta according to package directions. In a large skillet, cook chicken in oil over medium heat until no longer pink. Add garlic; cook 1 minute longer. Stir in cream and butter; cook and stir until butter is melted. Gradually stir in cheese until melted. Drain pasta; add to skillet and toss to coat."
+    "des": "To prepare Chicken Alfredo Pasta, you first start by gathering all the necessary ingredients. These typically include boneless, skinless chicken breasts, fettuccine pasta, heavy cream, butter, garlic, Parmesan cheese, salt, pepper, and optionally, some parsley for garnish.",
   },
   {
     "_id": 1008,
@@ -117,9 +120,12 @@ export const paginationItems = [
     "categ": "Quick meals",
     "des": "Spread butter on one side of each slice of bread. Place cheese between the two slices, buttered sides facing out. Heat a skillet over medium heat. Place sandwich in skillet and cook until golden brown on both sides and cheese is melted."
   },
+
+
+
   {
     "_id": 1012,
-    "img": spfOne,
+    "img": applePie,
     "productName": "Apple Pie",
     "rate": 27,
     "categ": "Dessert",
@@ -127,7 +133,7 @@ export const paginationItems = [
   },
   {
     "_id": 1013,
-    "img": spfTwo,
+    "img": eggPlant,
     "productName": "Eggplant Parmesan",
     "rate": 32,
     "categ": "Vegetarian",
@@ -135,7 +141,7 @@ export const paginationItems = [
   },
   {
     "_id": 1014,
-    "img": spfThree,
+    "img": bananaBred,
     "productName": "Banana Bread",
     "rate": 30,
     "categ": "Dessert",
@@ -143,7 +149,7 @@ export const paginationItems = [
   },
   {
     "_id": 1015,
-    "img": spfFour,
+    "img": beefTac,
     "productName": "Beef Tacos",
     "rate": 28,
     "categ": "Quick meals",
@@ -151,7 +157,7 @@ export const paginationItems = [
   },
   {
     "_id": 1016,
-    "img": bestSellerOne,
+    "img": chockKace,
     "productName": "Chocolate Cake",
     "rate": 33,
     "categ": "Dessert",

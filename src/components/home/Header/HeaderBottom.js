@@ -49,6 +49,7 @@ const HeaderBottom = () => {
   // ------------ check if logged in ----------------------
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const usar = JSON.parse(localStorage.getItem("user"));
+  const userName = usar?.email ;
   console.log(usar, "user");
   useEffect(() => {
     if (usar) {
@@ -115,7 +116,9 @@ const HeaderBottom = () => {
               </div>
             )}
           </div>
+          
           <div className="flex gap-4 mt-2 lg:mt-0 items-center pr-6 cursor-pointer relative">
+           <p className="font-bold text-xs">{userName}</p>
             <div onClick={() => setShowUser(!showUser)} className="flex">
               <FaUser className=" text-[#808000] " />
               <FaCaretDown className=" text-[#808000] " />
@@ -125,7 +128,7 @@ const HeaderBottom = () => {
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="absolute top-6 -mx-20 z-50 bg-primeColor w-38 text-[#767676] h-auto p-4 pb-6 sm:right-2 "
+                className="absolute top-6  z-50 bg-primeColor w-58 text-[#767676] h-auto p-4 pb-6 lg:right-2 sm:right-[-1] md:right-2"
               >
                 <Link to="/signin">
                   <li className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer">

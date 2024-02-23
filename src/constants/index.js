@@ -22,17 +22,17 @@ export const navBarList = [
   {
     _id: 1002,
     title: "Recipes",
-    link: "/shop",
+    link: "/recipe",
   },
   {
     _id: 1006,
     title: "Favorites",
-    link: "/cart",
+    link: "/fave",
   },
   {
     _id: 1004,
     title: "Contribute",
-    link: "/contact",
+    link: "/contribute",
   },
   {
     _id: 1003,
@@ -156,40 +156,6 @@ export const paginationItems = [
     "rate": 33,
     "categ": "Dessert",
     "des": "Preheat oven to 350°F (175°C). Grease and flour two 9-inch round cake pans. In a large bowl, cream together butter and sugar until light and fluffy. Beat in eggs one at a time, then stir in vanilla. Combine flour, cocoa, baking soda, and salt; gradually blend into the creamed mixture. Pour batter into prepared pans. Bake for 30 to 35 minutes, or until a toothpick inserted into the center comes out clean. Allow cakes to cool in pans for 10 minutes, then remove from pans and cool completely on wire racks."
-  },
-  {
-    "_id": 1017,
-    "img": bestSellerTwo,
-    "productName": "Vegetable Curry",
-    "rate": 31,
-    "categ": "Vegetarian",
-    "des": "Heat oil in a large skillet over medium heat. Stir in onion and garlic; cook until onion is transparent. Stir in curry powder, cinnamon, paprika, and bay leaf. Cook for 1 minute, stirring constantly. Mix in cauliflower, potatoes, carrots, and peas. Stir in coconut milk. Cover and simmer, stirring occasionally, until vegetables are tender, about 20 minutes. Season with salt and pepper to taste. Serve over rice."
-  },
-  {
-    "_id": 1018,
-    "img": bestSellerThree,
-    "productName": "Spaghetti Carbonara",
-    "rate": 29,
-    "categ": "Quick meals",
-    "des": "Cook spaghetti according to package directions. Meanwhile, cook bacon in a large skillet until crisp; remove bacon and set aside. Drain excess fat from skillet, leaving a thin coating. In a medium bowl, whisk together eggs, Parmesan cheese, and black pepper. When spaghetti is cooked, drain and return to skillet. Quickly stir in egg mixture, allowing the residual heat to cook the eggs. Crumble bacon over pasta and serve immediately."
-  },
-  {
-    "_id": 1019,
-    "img": bestSellerFour,
-    "productName": "Chicken Quesadillas",
-    "rate": 30,
-    "categ": "Quick meals",
-    "des": "In a large skillet, heat oil over medium heat. Place one tortilla in the skillet. Layer with chicken, cheese, and any desired toppings. Top with another tortilla. Cook until bottom tortilla is golden brown, then flip and cook until cheese is melted and second tortilla is golden brown. Repeat with remaining tortillas and fillings. Cut quesadillas into wedges and serve with salsa and sour cream."
-  },
-  {
-    "_id": 1020,
-    "img": newArrOne,
-    "productName": "Strawberry Shortcake",
-    "rate": 28,
-    "categ": "Dessert",
-    "des": "Preheat oven to 425°F (220°C). In a large bowl, combine flour, sugar, baking powder, and salt. Cut in butter until mixture resembles coarse crumbs. Stir in milk until just moistened. Drop by spoonfuls onto a baking sheet. Bake for 12 to 15 minutes, or until golden brown. Meanwhile, in a medium bowl, whisk together sliced strawberries and sugar. Let sit for 10 minutes. Split warm shortcakes and fill with strawberries. Top with whipped cream."
-  },
-
- 
+  }, 
 ];
 // =================== PaginationItems End here =================

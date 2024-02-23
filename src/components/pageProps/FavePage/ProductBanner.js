@@ -54,7 +54,7 @@ const ProductBanner = ({ itemsPerPageFromBanner }) => {
           >
             <option value="3">3</option>
             <option value="9">9</option>
-            <option value="18">18</option>
+            <option value="16">16</option>
           </select>
           <span className="absolute text-sm right-3 top-2.5">
             <GoTriangleDown className="text-[#808000]" />

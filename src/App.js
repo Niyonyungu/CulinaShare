@@ -13,11 +13,11 @@ import SpecialCase from "./components/SpecialCase/SpecialCase";
 import About from "./pages/About/About";
 import SignIn from "./pages/Account/SignIn";
 import SignUp from "./pages/Account/SignUp";
-import Cart from "./pages/Cart/Cart";
-import Contact from "./pages/Contact/Contact";
+import Favorites from "./pages/Favorites/Favorites";
+import Contribute from "./pages/Contribute/Contribute";
 import Home from "./pages/Home/Home";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
-import Shop from "./pages/Shop/Shop";
+import Recippe from "./pages/Recippe/Recippe";
 
 const Layout = () => {
   return (
@@ -37,12 +37,12 @@ const router = createBrowserRouter(
       <Route path="/" element={<Layout />}>
         {/* ==================== Header Navlink Start here =================== */}
         <Route index element={<Home />}></Route>
-        <Route path="/shop" element={<Shop />}></Route>
+        <Route path="/recipe" element={<Recippe />}></Route>
         <Route path="/about" element={<About />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/contribute" element={<Contribute />}></Route>
         {/* ==================== Header Navlink End here ===================== */}
         <Route path="/product/:_id" element={<ProductDetails />}></Route>
-        <Route path="/cart" element={<Cart />}></Route>
+        <Route path="/fave" element={<Favorites />}></Route>
       </Route>
       <Route path="/signup" element={<SignUp />}></Route>
       <Route path="/signin" element={<SignIn />}></Route>

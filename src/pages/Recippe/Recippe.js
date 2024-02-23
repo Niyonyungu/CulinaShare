@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Breadcrumbs from "../../components/pageProps/Breadcrumbs";
-import Pagination from "../../components/pageProps/shopPage/Pagination";
-import ProductBanner from "../../components/pageProps/shopPage/ProductBanner";
+import Pagination from "../../components/pageProps/FavePage/Pagination";
+import ProductBanner from "../../components/pageProps/FavePage/ProductBanner";
 
-const Shop = () => {
+const Recippe = () => {
   const [itemsPerPage, setItemsPerPage] = useState(3);
   const itemsPerPageFromBanner = (itemsPerPage) => {
     setItemsPerPage(itemsPerPage);
@@ -24,4 +24,4 @@ const Shop = () => {
   );
 };
 
-export default Shop;
+export default Recippe;

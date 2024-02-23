@@ -45,6 +45,19 @@ const HeaderBottom = () => {
     }, 2000);
   };
 
+
+  // ------------ check if logged in ----------------------
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const usar = JSON.parse(localStorage.getItem("user"));
+  console.log(usar, "user");
+  useEffect(() => {
+    if (usar) {
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  }, [usar]);
+
   return (
     <div className="w-full bg-[#F5F5F3] relative">
       <div className="max-w-container mx-auto">
@@ -124,11 +137,13 @@ const HeaderBottom = () => {
                     Sign Up
                   </li>
                 </Link>
-                <div onClick={() => setShowUser(false)} >
+                {isLoggedIn && (
+                   <div onClick={() => setShowUser(false)} >
                   <li onClick={handleLogOut} className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer">
                     Log Out
                   </li>
                 </div>
+                )}
               </motion.ul>
             )}
           </div>

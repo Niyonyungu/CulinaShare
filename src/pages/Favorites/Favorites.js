@@ -7,7 +7,7 @@ import { resetFave } from "../../redux/culinaSlice";
 import { emptyFav } from "../../assets/images/index";
 import ItemCard from "./ItemCard";
 
-const Cart = () => {
+const Favorites = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.culinaReducer.products);
 
@@ -53,7 +53,7 @@ const Cart = () => {
               Your favorites recipe lives to serve. Give it purpose - fill it
               with Recipes and make it happy.
             </p>
-            <Link to="/shop">
+            <Link to="/recipe">
               <button className="bg-[#808000] rounded-md cursor-pointer hover:bg-olive-400 active:bg-gray-900 px-8 py-2 font-titleFont font-semibold text-lg text-gray-200 hover:text-white duration-300">
                 Continue Exproling
               </button>
@@ -65,4 +65,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default Favorites;

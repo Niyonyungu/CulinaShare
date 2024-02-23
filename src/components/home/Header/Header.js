@@ -60,7 +60,7 @@ const Header = () => {
               >
                 <>
                 {navBarList.map(({ _id, title, link }) => {
-                    if (link === '/cart' && !isLoggedIn) {
+                    if (link === '/fave' && !isLoggedIn) {
                       return null; 
                     } else {
                       return (
@@ -93,7 +93,8 @@ const Header = () => {
                   <div className="w-full h-full bg-primeColor p-6">
                     <img className="w-28 mb-6" src={lo} alt="logoLight" />
                     <ul className="text-gray-400 flex flex-col gap-2">
-                      {navBarList.map((item) => (
+                    {navBarList.map((item) => (
+                      item.link === '/fave' && !isLoggedIn ? null : (
                         <li
                           className="font-normal hover:font-bold items-center text-lg text-gray-200 hover:underline underline-offset-[4px] decoration-[1px] hover:text-white md:border-r-[2px] border-r-gray-300 hoverEffect last:border-r-0"
                           key={item._id}
@@ -106,6 +107,7 @@ const Header = () => {
                             {item.title}
                           </NavLink>
                         </li>
+                        )
                       ))}
                     </ul>
                   </div>

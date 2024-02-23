@@ -22,10 +22,10 @@ const SpecialCase = () => {
   const handleLoggedIn = (e) =>{
     e.preventDefault();
     if(isLoggedIn) {
-      navigate('/cart');
+      navigate('/fave');
       }
       else{
-           navigate('/signup');
+           navigate('/signin');
       }
   };
 

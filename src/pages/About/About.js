@@ -19,7 +19,7 @@ const About = () => {
           is one of the world's leading Recipes brands and is internationally
           recognized for having a variety of Recipes.
         </h1>
-        <Link to="/shop">
+        <Link to="/recipe">
           <button className="w-52 h-10 bg-[#808000] text-white  duration-300">
             Continue Exploring
           </button>

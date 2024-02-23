@@ -4,7 +4,7 @@ import Breadcrumbs from "../../components/pageProps/Breadcrumbs";
 import { paginationItems } from "../../constants";
 import { useNavigate } from "react-router-dom";
 
-const Contact = () => {
+const Contribute = () => {
 
   // ------------ check if logged in ----------------------
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -69,7 +69,7 @@ const Contact = () => {
     if(!isLoggedIn){
       navigate("/signin")
     } else {
-      navigate("/Shop");
+      navigate("/recipe");
     }  
   };
 
@@ -171,4 +171,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Contribute;

@@ -5,6 +5,19 @@ import { paginationItems } from "../../constants";
 import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
+
+  // ------------ check if logged in ----------------------
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const usar = JSON.parse(localStorage.getItem("user"));
+  console.log(usar, "user");
+  useEffect(() => {
+    if (usar) {
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  }, [usar]);
+
   const navigate = useNavigate();
   const location = useLocation();
   const [prevLocation, setPrevLocation] = useState("");
@@ -16,6 +29,8 @@ const Contact = () => {
     rate: "",
     instruction: ""
   });
+  
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     setPrevLocation(location.state.data);
@@ -23,6 +38,17 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (
+      formData.recipeName.trim() === "" ||
+      formData.recipeImage.trim() === "" ||
+      formData.category.trim() === "" ||
+      formData.rate.trim() === "" ||
+      formData.instruction.trim() === ""
+    ) {
+      setErrorMessage("Please fill all fields.");
+      return;
+    }
 
     const newItem = {
       _id: paginationItems.length + 1, 
@@ -40,7 +66,11 @@ const Contact = () => {
       rate: "",
       instruction: ""
     }); 
+    if(!isLoggedIn){
+      navigate("/signin")
+    } else {
       navigate("/Shop");
+    }  
   };
 
   const handleChange = (e) => {
@@ -52,7 +82,6 @@ const Contact = () => {
   };
 
   
-
   return (
     <div className="max-w-container mx-auto px-4">
       <Breadcrumbs title="Contibute" prevLocation={prevLocation} />
@@ -127,6 +156,9 @@ const Contact = () => {
                 placeholder="Enter How to prepare this recipe"
               ></textarea>
             </div>
+            {errorMessage && (
+            <p className="text-red-500">{errorMessage}</p>
+          )}
             <button
               onClick={(e) => handleSubmit(e)}
               className="w-44 bg-[#808000] text-gray-200 h-10 font-titleFont text-base tracking-wide font-semibold hover:bg-olive-400 hover:text-white duration-200"

@@ -43,4 +43,12 @@ CulinaShare is Website where users can explore a wide variety of recipes, contri
   npm run start
   ```
 
+## Live/Deployed Version
+
+ ```bash
+ https://culina-share-five.vercel.app/
+  ```
+
+
+
 

@@ -125,7 +125,7 @@ const HeaderBottom = () => {
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="absolute top-6 -mx-20 z-50 bg-primeColor w-38 text-[#767676] h-auto p-4 pb-6 sm:left-0 "
+                className="absolute top-6 -mx-20 z-50 bg-primeColor w-38 text-[#767676] h-auto p-4 pb-6 sm:right-2 "
               >
                 <Link to="/signin">
                   <li className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer">

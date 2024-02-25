@@ -130,16 +130,21 @@ const HeaderBottom = () => {
                 transition={{ duration: 0.5 }}
                 className="absolute top-6  z-50 bg-primeColor w-58 text-[#767676] h-auto p-4 pb-6 lg:right-2 sm:right-[-1] md:right-2"
               >
+              {!isLoggedIn  && (
                 <Link to="/signin">
                   <li className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer">
                     Login
                   </li>
                 </Link>
-                <Link onClick={() => setShowUser(false)} to="/signup">
+              )}
+                {!isLoggedIn && (
+                   <Link onClick={() => setShowUser(false)} to="/signup">
                   <li className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer">
                     Sign Up
                   </li>
                 </Link>
+                )}
+               
                 {isLoggedIn && (
                    <div onClick={() => setShowUser(false)} >
                   <li onClick={handleLogOut} className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer">

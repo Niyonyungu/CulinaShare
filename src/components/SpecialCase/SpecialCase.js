@@ -10,7 +10,7 @@ const SpecialCase = () => {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const usar = JSON.parse(localStorage.getItem("user"));
-  console.log(usar, "user");
+  // console.log(usar, "user");
   useEffect(() => {
     if (usar) {
       setIsLoggedIn(true);

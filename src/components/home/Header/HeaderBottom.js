@@ -6,23 +6,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { paginationItems } from "../../../constants";
 
 const HeaderBottom = () => {
-  const [show, setShow] = useState(false);
   const [showUser, setShowUser] = useState(false);
   const navigate = useNavigate();
-  const ref = useRef();
-  useEffect(() => {
-    document.body.addEventListener("click", (e) => {
-      if (ref.current.contains(e.target)) {
-        setShow(true);
-      } else {
-        setShow(false);
-      }
-    });
-  }, [show, ref]);
+ 
 
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
-  // const [showSearchBar, setShowSearchBar] = useState(false);
 
   const handleSearch = (e) => {
     setSearchQuery(e.target.value);
@@ -35,9 +24,7 @@ const HeaderBottom = () => {
     setFilteredProducts(filtered);
   }, [searchQuery]);
 
-
-  
-    // Function to handle click outside of the dropdown menu
+    // ==============   handle click outside of the dropdown menu
   
   useEffect(() => {
     function handleClickOutside(event) {
@@ -66,7 +53,7 @@ const HeaderBottom = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const usar = JSON.parse(localStorage.getItem("user"));
   const userName = usar?.email ;
-  console.log(usar, "user");
+  // console.log(usar, "user");
   useEffect(() => {
     if (usar) {
       setIsLoggedIn(true);
@@ -135,7 +122,7 @@ const HeaderBottom = () => {
           
           <div className="flex gap-4 mt-2 lg:mt-0 items-center pr-6 cursor-pointer relative">
            <p className="font-bold text-xs">{userName}</p>
-            <div onClick={() => setShowUser(!showUser)} className="flex">
+            <div onClick={() => setShowUser(true)} className="flex">
               <FaUser className=" text-[#808000] " />
               <FaCaretDown className=" text-[#808000] " />
             </div>

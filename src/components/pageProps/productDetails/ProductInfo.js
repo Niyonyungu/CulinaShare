@@ -33,7 +33,7 @@ const ProductInfo = ({ productInfo }) => {
         >
           Add to Favorites
         </button>
-        <FaShareNodes className=" text-5xl cursor-pointer" />
+        {/* <FaShareNodes className=" text-5xl cursor-pointer" /> */}
       </div>
     </div>
   );

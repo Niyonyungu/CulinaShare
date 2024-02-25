@@ -146,9 +146,8 @@ const Contribute = () => {
                In<span className="text-[#808000]">struct</span>ion
               </p>
               <textarea
-                cols="30"
-                rows="3"
-                className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-[#808000] resize-none"
+                className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-[#808000]  overflow-y-auto scrollbar-none resize-y h-auto"
+                style={{ minHeight: '5rem', maxHeight: '80vh' }}
                 type="text"
                 name="instruction"
                 value={formData.instruction}

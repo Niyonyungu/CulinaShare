@@ -35,7 +35,23 @@ const HeaderBottom = () => {
     setFilteredProducts(filtered);
   }, [searchQuery]);
 
-  //        ======           Logout  
+
+  
+    // Function to handle click outside of the dropdown menu
+  
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (showUser && !event.target.closest('.flex.gap-4')) {
+        setShowUser(false);
+      }
+    }
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [showUser]);
+
+  //        ======      Logout  
 
   const handleLogOut = () => {
     localStorage.removeItem("token");
@@ -131,7 +147,7 @@ const HeaderBottom = () => {
                 className="absolute top-6  z-10 bg-primeColor w-58 text-[#767676] h-auto p-4 pb-6 lg:right-2 sm:right-[-1] md:right-2"
               >
               {!isLoggedIn  && (
-                <Link to="/signin">
+                <Link onClick={() => setShowUser(false)} to="/signin">
                   <li className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer">
                     Login
                   </li>

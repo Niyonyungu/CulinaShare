@@ -128,7 +128,7 @@ const HeaderBottom = () => {
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="absolute top-6  z-50 bg-primeColor w-58 text-[#767676] h-auto p-4 pb-6 lg:right-2 sm:right-[-1] md:right-2"
+                className="absolute top-6  z-10 bg-primeColor w-58 text-[#767676] h-auto p-4 pb-6 lg:right-2 sm:right-[-1] md:right-2"
               >
               {!isLoggedIn  && (
                 <Link to="/signin">
